@@ -18,7 +18,6 @@ npm run dev        # http://localhost:5173
 | `npm run build`         | Type-check and build to `dist/` (also emits sitemap.xml/robots.txt) |
 | `npm run preview`       | Serve the production build on port 4173                            |
 | `npm run typecheck`     | TypeScript only                                                    |
-| `npm run deploy`        | Build and publish to GitHub Pages (`gh-pages` branch)              |
 | `npm run qa:functional` | Drive every interaction in Chromium (needs a running server)       |
 | `npm run qa:screens`    | Full-page screenshots of every route at 10 breakpoints             |
 
@@ -79,7 +78,8 @@ Nothing is required to run locally. Copy `.env.example` to `.env` to override:
 
 Live site: https://olwethubb.github.io/hubbard-college-portal/
 
-`npm run deploy` builds the site and publishes `dist/` to the `gh-pages` branch, which GitHub Pages serves.
+Every push to `main` builds and deploys the site automatically via `.github/workflows/deploy.yml`
+(it can also be re-run by hand from the repo's Actions tab).
 
 `dist/` is a static single-page app. The build also writes `404.html` (a copy of `index.html`), so deep links
 like `/courses` work on GitHub Pages. To serve the site from a sub-path, set `BASE_PATH` (e.g. `/my-repo/`)
