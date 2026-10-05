@@ -9,7 +9,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "qa:screens": "node scripts/screenshots.mjs"
+    "qa:screens": "node scripts/screenshots.mjs",
+    "qa:functional": "node scripts/functional-qa.mjs"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.1.6",
