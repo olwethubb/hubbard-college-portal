@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment (never commit real values)
+.env
+.env.*
+!.env.example
+
+# QA artefacts
+qa-screens/
+test-results/
+playwright-report/
+
+# Logs / OS / editor
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Unrelated pre-existing folder that lives next to this project
+HCA Creative OS/

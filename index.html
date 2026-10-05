@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubbard College Modern Portal</title>
+    <meta
+      name="description"
+      content="A high-performance, elegant digital hub for Hubbard College designed to elevate student engagement and streamline institutional communication."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="%SITE_URL%/" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph / Twitter (mirrors the original portal) -->
+    <meta property="og:title" content="Hubbard College Modern Portal" />
+    <meta
+      property="og:description"
+      content="A high-performance, elegant digital hub for Hubbard College designed to elevate student engagement and streamline institutional communication."
+    />
+    <meta property="og:image" content="%SITE_URL%/og-image.png" />
+    <meta property="og:url" content="%SITE_URL%" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hubbard College Modern Portal" />
+    <meta name="twitter:title" content="Hubbard College Modern Portal" />
+    <meta
+      name="twitter:description"
+      content="A high-performance, elegant digital hub for Hubbard College designed to elevate student engagement and streamline institutional communication."
+    />
+    <meta name="twitter:image" content="%SITE_URL%/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="%SITE_URL%" />
+
+    <!-- Fonts: Inter + Playfair Display (same families/weights as the original) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    />
+
+    <link rel="preload" as="image" href="/images/site/hero-team.webp" fetchpriority="high" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollegeOrUniversity",
+        "name": "Hubbard College of Administration South Africa",
+        "alternateName": "Hubbard College",
+        "url": "%SITE_URL%/",
+        "logo": "%SITE_URL%/images/site/hca-logo.png",
+        "description": "Practical workshops, proven management courses, and hands-on training that equip you with the skills to lead with confidence and drive real results.",
+        "email": "info@hubbardcollegesa.org",
+        "telephone": "+27 (0) 11 234 5678",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Johannesburg",
+          "addressCountry": "ZA"
+        },
+        "sameAs": ["https://www.facebook.com/HCA.Jhb"]
+      }
+    </script>
+  </head>
+  <body>
+    <noscript>Hubbard College Modern Portal requires JavaScript to run.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "69d89729998005ec85eef815",
+    "name": "Financial Planning Course",
+    "category": "Finance",
+    "duration": "1-Day Course",
+    "description": "Implement a sane and disciplined financial system that keeps your organisation solvent.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/FINANCIAL_PLANNING.jpg",
+    "source_image_url": "https://images.assets-landingi.com/PHE8QQ7JJmYC4cK9/FINANCIAL_PLANNING.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef817",
+    "name": "Handling Ups & Downs in Life",
+    "category": "Personal Development",
+    "duration": "1-Day Course",
+    "description": "Identify and remedy influences that cause instability in work and life performance.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/UPS_AND_DOWNS_IN_LIFE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/6nANJZmejatw7YU0/UPS_AND_DOWNS_IN_LIFE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef812",
+    "name": "Effective Leadership Course",
+    "category": "Leadership",
+    "duration": "2-Day Course",
+    "description": "Develop the qualities of great leadership and how to inspire and guide your team.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/EFFECTIVE_LEADERSHIP_COURSE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/0vky3FIE5WECydSq/EFFECTIVE_LEADERSHIP_COURSE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81d",
+    "name": "Management by Statistics",
+    "category": "Management",
+    "duration": "2-Day Course",
+    "description": "Gain control of your statistics, read trends, and increase production in your business.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/MANAGEMENT_BY_STATISTICS.jpg",
+    "source_image_url": "https://images.assets-landingi.com/cnggCcw1N9oMnlEp/MANAGEMENT_BY_STATISTICS.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81e",
+    "name": "Marketing Basics Course",
+    "category": "Marketing",
+    "duration": "1-Day Course",
+    "description": "Learn how to understand your market and build effective campaigns that produce results.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/MARKETING_BASICS_COURSE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/Ib3EyFnHplvP4MyS/MARKETING_BASICS_COURSE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef816",
+    "name": "Formulas for Business Success",
+    "category": "Strategy",
+    "duration": "2-Day Course",
+    "description": "Learn exact procedures to improve any condition in your business or career.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/FORMULAS_FOR_BUSINESS_SUCCESS.jpg",
+    "source_image_url": "https://images.assets-landingi.com/OH8ilf8K4Rfpa0bL/FORMULAS_FOR_BUSINESS_SUCCESS.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef813",
+    "name": "Ethics for Business Survival",
+    "category": "Ethics",
+    "duration": "1-Day Course",
+    "description": "A comprehensive guide to business ethics with practical milestones you can apply immediately.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/ETHICS_FOR_BUSINESS_SURVIVAL.jpg",
+    "source_image_url": "https://images.assets-landingi.com/MK7jmCc8z2OOFDST/ETHICS_FOR_BUSINESS_SURVIVAL.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef819",
+    "name": "How to Get Along With Others",
+    "category": "Communication",
+    "duration": "1-Day Course",
+    "description": "Raise the tone and productivity of any company through affinity, reality and communication.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/HOW_TO_GET_ALONG_WITH_OTHERS_COURSE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/YYFsga3dBCqNVpMJ/HOW_TO_GET_ALONG_WITH_OTHERS_COURSE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81f",
+    "name": "The Basics of Survey Technology",
+    "category": "Marketing",
+    "duration": "1-Day Course",
+    "description": "Discover how to conduct surveys and how emotional response monitors all campaign results.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/SURVEY_COURSE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/17mZVMd2C6K4EMM9/SURVEY_COURSE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef811",
+    "name": "Basic Organisation Course",
+    "category": "Management",
+    "duration": "2-Day Course",
+    "description": "Learn the 5 most important steps to establish a successful business structure.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/basic_organisation.jpg",
+    "source_image_url": "https://images.assets-landingi.com/zSS3hZeEDnpwoqfk/basic_organisation.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef820",
+    "name": "Personal Values & Integrity Course",
+    "category": "Personal Development",
+    "duration": "1-Day Course",
+    "description": "Restore integrity, stand up for what's true, and achieve genuine happiness and performance.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/PERSONAL_VALUES_INTEGRITY_COURSE.jpg",
+    "source_image_url": "https://images.assets-landingi.com/cl4FwLrNc0qKKIsl/PERSONAL_VALUES_INTEGRITY_COURSE.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef814",
+    "name": "Executive Basics Course",
+    "category": "Leadership",
+    "duration": "1-Day Course",
+    "description": "Key essentials for any executive — duties, functions, products, and leadership fundamentals.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/EXECUTIVE_BASICS.jpg",
+    "source_image_url": "https://images.assets-landingi.com/vPrEXDCq1PItEkKb/EXECUTIVE_BASICS.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81a",
+    "name": "How to Write Effective Company Policy",
+    "category": "Management",
+    "duration": "1-Day Course",
+    "description": "Create clear, workable policies that your staff will understand and follow.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/WRITE_COMPANY_POLICY.jpg",
+    "source_image_url": "https://images.assets-landingi.com/hYzmzqUo8ysllWPz/WRITE_COMPANY_POLICY.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef818",
+    "name": "How to Effectively Handle Work",
+    "category": "Productivity",
+    "duration": "1-Day Course",
+    "description": "Solutions to increased performance, time management, and renewed enthusiasm for work.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/EFFECTIVELY_HANDLE_WORK.jpg",
+    "source_image_url": "https://images.assets-landingi.com/1Ec34YenO9CGP1gL/EFFECTIVELY_HANDLE_WORK.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81b",
+    "name": "Increasing Efficiency Course",
+    "category": "Productivity",
+    "duration": "1-Day Course",
+    "description": "Perform duties with maximum productivity and minimum time wastage across your organisation.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/increasing_efficiency.jpg",
+    "source_image_url": "https://images.assets-landingi.com/eqMRv1Yt8kJB1YUR/increasing_efficiency.jpg"
+  },
+  {
+    "id": "69d89729998005ec85eef81c",
+    "name": "Making Planning Become Actuality",
+    "category": "Strategy",
+    "duration": "1-Day Course",
+    "description": "Bridge the gap between planning and execution with proven management techniques.",
+    "is_active": true,
+    "created_date": "2026-04-10T06:22:33.301000",
+    "image_url": "/images/courses/MAKING_PLANNING_BECOME_ACTUALITY.jpg",
+    "source_image_url": "https://images.assets-landingi.com/h7SbxBpcl3GrFx45/MAKING_PLANNING_BECOME_ACTUALITY.jpg"
+  }
+]
