@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
+import { asset } from "@/lib/site";
 import { scrollToSection } from "@/lib/utils";
 
 const STATS = [
@@ -15,7 +16,7 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/images/site/hero-team.webp"
+          src={asset("images/site/hero-team.webp")}
           alt="Professional business team collaborating"
           width={1344}
           height={768}

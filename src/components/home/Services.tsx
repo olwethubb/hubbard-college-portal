@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, BookOpen, ClipboardCheck, TrendingUp } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { asset } from "@/lib/site";
 import { SalesWorkshopModal } from "./SalesWorkshopModal";
 
 const SERVICES = [
@@ -10,7 +11,7 @@ const SERVICES = [
     title: "Workshops & Seminars",
     description:
       "Attend hands-on workshops that take you through essential management steps in a balanced manner, giving you confidence to apply what you've learned.",
-    image: "/images/site/service-workshops.webp",
+    image: asset("images/site/service-workshops.webp"),
     tag: "Interactive",
     opensModal: true,
   },
@@ -19,7 +20,7 @@ const SERVICES = [
     title: "Management Training",
     description:
       "Get practical knowledge in specific areas of management. Learn to manage projects, tasks, and people with greater control and effectiveness.",
-    image: "/images/site/service-management.webp",
+    image: asset("images/site/service-management.webp"),
     tag: "Comprehensive",
   },
   {
@@ -27,7 +28,7 @@ const SERVICES = [
     title: "Free Business Analysis",
     description:
       "Stop guessing what's wrong in your business. Take our comprehensive assessment that identifies trouble areas and maps a clear path forward.",
-    image: "/images/site/service-analysis.webp",
+    image: asset("images/site/service-analysis.webp"),
     tag: "Complimentary",
   },
 ];

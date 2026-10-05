@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleCheckBig, X } from "lucide-react";
+import { asset } from "@/lib/site";
 
 const TESTIMONIALS = [
   {
@@ -77,7 +78,7 @@ export function SalesWorkshopModal({ open, onClose }: SalesWorkshopModalProps) {
           >
             <div className="relative h-52 overflow-hidden rounded-t-2xl">
               <img
-                src="/images/site/sales-workshop-modal.jpg"
+                src={asset("images/site/sales-workshop-modal.jpg")}
                 alt="Sales Workshop"
                 className="w-full h-full object-cover"
               />

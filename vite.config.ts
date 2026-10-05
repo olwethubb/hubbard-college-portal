@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
+import fs from "node:fs";
 import path from "node:path";
 
 // Public routes that should be indexed. "/cart" is a private, per-visitor page.
@@ -34,6 +35,12 @@ function seoFiles(siteUrl: string): Plugin {
       this.emitFile({ type: "asset", fileName: "sitemap.xml", source: sitemap() });
       this.emitFile({ type: "asset", fileName: "robots.txt", source: robots() });
     },
+    // Static hosts such as GitHub Pages serve 404.html for unknown paths, so a copy of the
+    // app shell there lets deep links like /courses load the SPA.
+    writeBundle(options) {
+      const dir = options.dir ?? "dist";
+      fs.copyFileSync(path.join(dir, "index.html"), path.join(dir, "404.html"));
+    },
     transformIndexHtml(html) {
       return html.replace(/%SITE_URL%/g, base);
     },
@@ -43,8 +50,11 @@ function seoFiles(siteUrl: string): Plugin {
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   const siteUrl = env.VITE_SITE_URL || "http://localhost:5173";
+  // Sub-path the site is served from, e.g. "/hubbard-college-portal/" on GitHub Pages.
+  const base = env.BASE_PATH || "/";
 
   return {
+    base,
     plugins: [react(), seoFiles(siteUrl)],
     resolve: { alias: { "@": path.resolve(__dirname, "src") } },
     server: { port: 5173 },

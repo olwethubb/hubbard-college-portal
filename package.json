@@ -9,6 +9,7 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "deploy": "node scripts/deploy-pages.mjs",
     "qa:screens": "node scripts/screenshots.mjs",
     "qa:functional": "node scripts/functional-qa.mjs"
   },

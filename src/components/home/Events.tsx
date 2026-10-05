@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, Clock, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { asset } from "@/lib/site";
 
 const EVENTS = [
   {
-    image: "/images/site/event-sales-workshop.webp",
+    image: asset("images/site/event-sales-workshop.webp"),
     badge: "Featured",
     title: "SALES Workshop",
     description:
@@ -14,7 +15,7 @@ const EVENTS = [
     location: "Johannesburg, SA",
   },
   {
-    image: "/images/site/event-emotions-workplace.webp",
+    image: asset("images/site/event-emotions-workplace.webp"),
     badge: "Weekly",
     title: "Emotions in the Workplace",
     description:

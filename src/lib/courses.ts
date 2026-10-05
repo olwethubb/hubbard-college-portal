@@ -1,4 +1,5 @@
 import catalog from "@/data/courses.json";
+import { asset } from "./site";
 
 export interface Course {
   id: string;
@@ -30,5 +31,8 @@ export async function listCourses(limit = 50): Promise<Course[]> {
   }
   // Brief async tick so the loading state behaves like a network fetch.
   await new Promise((r) => setTimeout(r, 250));
-  return (catalog as Course[]).slice(0, limit);
+  // Snapshot images live in public/, so resolve them against the deploy base path.
+  return (catalog as Course[])
+    .slice(0, limit)
+    .map((c) => (c.image_url?.startsWith("/") ? { ...c, image_url: asset(c.image_url) } : c));
 }
