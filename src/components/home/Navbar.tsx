@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ExternalLink, Menu, X } from "lucide-react";
 import { LOGIN_URL, LOGO_SRC } from "@/lib/site";
@@ -15,10 +15,22 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  // A smooth scroll started while the mobile menu is collapsing gets cancelled by the
+  // browser, so mobile links scroll once the menu's exit animation has finished.
+  const pendingTarget = useRef<string | null>(null);
 
   const go = (href: string) => {
-    setOpen(false);
-    scrollToSection(href);
+    if (open) {
+      pendingTarget.current = href;
+      setOpen(false);
+    } else {
+      scrollToSection(href);
+    }
+  };
+
+  const onMenuClosed = () => {
+    if (pendingTarget.current) scrollToSection(pendingTarget.current);
+    pendingTarget.current = null;
   };
 
   return (
@@ -70,7 +82,7 @@ export function Navbar() {
         </div>
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={onMenuClosed}>
         {open && (
           <motion.div
             id="mobile-menu"
