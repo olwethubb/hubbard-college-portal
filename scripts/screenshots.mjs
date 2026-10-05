@@ -37,6 +37,12 @@ for (const width of widths) {
         await new Promise((r) => setTimeout(r, 80));
       }
       window.scrollTo(0, 0);
+      // Lazy images requested during the scroll must finish before the capture.
+      await Promise.all(
+        [...document.images].map((img) =>
+          img.complete ? null : new Promise((r) => img.addEventListener("load", r) || img.addEventListener("error", r)),
+        ),
+      );
     });
     await page.waitForTimeout(1200);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);

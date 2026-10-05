@@ -15,6 +15,16 @@ function check(name, ok, detail = "") {
   console.log(`${ok ? "PASS" : "FAIL"}  ${name}${detail ? `  (${detail})` : ""}`);
 }
 
+/** Waits (up to 5s) for a smooth scroll to bring the section to the top, returning its final offset. */
+async function settledTop(page, selector) {
+  let top = Infinity;
+  for (let i = 0; i < 50 && Math.abs(top) >= 5; i++) {
+    await page.waitForTimeout(100);
+    top = await page.locator(selector).evaluate((el) => el.getBoundingClientRect().top);
+  }
+  return top;
+}
+
 async function newPage(width = 1440) {
   const context = await browser.newContext({ viewport: { width, height: 900 } });
   const page = await context.newPage();
@@ -32,8 +42,7 @@ async function newPage(width = 1440) {
 
   for (const [label, id] of [["About", "about"], ["Services", "services"], ["Courses", "courses"], ["Events", "events"], ["Contact", "contact"]]) {
     await page.getByRole("navigation", { name: "Main" }).getByRole("button", { name: label, exact: true }).click();
-    await page.waitForTimeout(900);
-    const top = await page.locator(`#${id}`).evaluate((el) => el.getBoundingClientRect().top);
+    const top = await settledTop(page, `#${id}`);
     check(`nav "${label}" scrolls to #${id}`, Math.abs(top) < 5, `top=${Math.round(top)}`);
   }
 
@@ -81,9 +90,8 @@ async function newPage(width = 1440) {
   check("mobile menu opens", await menu.isVisible());
   check("toggle reports expanded", (await page.getByRole("button", { name: "Close menu" }).getAttribute("aria-expanded")) === "true");
   await menu.getByRole("button", { name: "Events" }).click();
-  await page.waitForTimeout(1500);
+  const top = await settledTop(page, "#events");
   check("mobile menu closes after navigating", (await menu.count()) === 0);
-  const top = await page.locator("#events").evaluate((el) => el.getBoundingClientRect().top);
   check("mobile menu link scrolls to section", Math.abs(top) < 5, `top=${Math.round(top)}`);
   await page.context().close();
 }
