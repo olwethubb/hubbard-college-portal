@@ -13,12 +13,19 @@ export interface Order {
 const ORDER_ENDPOINT = import.meta.env.VITE_ORDER_ENDPOINT as string | undefined;
 const LOCAL_ORDERS_KEY = "hca_orders";
 
-export async function placeOrder(input: { cart: CartItem[]; email: string; phone: string; notes: string }) {
+export async function placeOrder(input: {
+  cart: CartItem[];
+  email: string;
+  phone: string;
+  notes: string;
+  name?: string;
+}) {
   const order: Order = {
     items: JSON.stringify(input.cart.map((i) => ({ id: i.id, name: i.name, qty: i.qty }))),
     status: "pending",
     notes: `Phone: ${input.phone}\n${input.notes}`,
     customer_email: input.email,
+    customer_name: input.name,
     created_date: new Date().toISOString(),
   };
 
