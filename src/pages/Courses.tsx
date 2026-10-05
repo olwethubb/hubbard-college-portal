@@ -35,7 +35,8 @@ export default function Courses() {
 
   useSeo({
     title: `Course Catalog | ${SITE_NAME}`,
-    description: "Browse Hubbard College courses and add them to your cart — a Sales Advisor will reach out to guide you.",
+    description:
+      "Browse Hubbard College courses and add them to your cart — a Sales Advisor will reach out to guide you.",
     path: "/courses",
     jsonLd: courses.length
       ? {
@@ -105,96 +106,95 @@ export default function Courses() {
         </div>
       </PortalHeader>
 
-      <div className="bg-primary py-14 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-white mb-4"
-          >
-            Browse Our Courses
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-white/60 font-inter text-lg mb-8 max-w-2xl mx-auto"
-          >
-            Add courses to your cart and a Sales Advisor will reach out to guide you.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="max-w-md mx-auto relative"
-          >
-            <Search
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40"
-              aria-hidden="true"
-            />
-            <Input
-              aria-label="Search courses"
-              placeholder="Search courses..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-accent"
-            />
-          </motion.div>
-
-          {!loading && categories.length > 1 && (
-            <motion.div
-              role="group"
-              aria-label="Filter by category"
-              initial={{ opacity: 0, y: 10 }}
+      <main>
+        <div className="bg-primary py-14 px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-wrap justify-center gap-2 mt-5"
+              className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold text-white mb-4"
             >
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setCategory(cat)}
-                  aria-pressed={category === cat}
-                  className={cn(
-                    "px-4 py-1.5 rounded-full text-sm font-inter font-semibold transition-all",
-                    category === cat
-                      ? "bg-accent text-white shadow-md shadow-accent/30"
-                      : "bg-white/10 text-white/70 hover:bg-white/20 hover:text-white",
-                  )}
-                >
-                  {cat}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </div>
-      </div>
-
-      <main className="max-w-7xl mx-auto px-6 py-12" aria-busy={loading}>
-        {loading ? (
-          <div className="flex justify-center py-24" role="status">
-            <div className="w-8 h-8 border-4 border-accent/20 border-t-accent rounded-full animate-spin" />
-            <span className="sr-only">Loading courses…</span>
-          </div>
-        ) : filtered.length === 0 ? (
-          <div className="text-center py-24">
-            <GraduationCap className="w-12 h-12 text-muted-foreground mx-auto mb-4" aria-hidden="true" />
-            <p className="text-muted-foreground font-inter">No courses found.</p>
-          </div>
-        ) : (
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filtered.map((course, i) => (
-              <CourseCard
-                key={course.id}
-                course={course}
-                index={i}
-                inCart={inCart(course.id)}
-                justAdded={justAdded.has(course.id)}
-                onAdd={handleAdd}
+              Browse Our Courses
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-white/60 font-inter text-lg mb-8 max-w-2xl mx-auto"
+            >
+              Add courses to your cart and a Sales Advisor will reach out to guide you.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="max-w-md mx-auto relative"
+            >
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" aria-hidden="true" />
+              <Input
+                aria-label="Search courses"
+                placeholder="Search courses..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-accent"
               />
-            ))}
+            </motion.div>
+
+            {!loading && categories.length > 1 && (
+              <motion.div
+                role="group"
+                aria-label="Filter by category"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-wrap justify-center gap-2 mt-5"
+              >
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    onClick={() => setCategory(cat)}
+                    aria-pressed={category === cat}
+                    className={cn(
+                      "px-4 py-1.5 rounded-full text-sm font-inter font-semibold transition-all",
+                      category === cat
+                        ? "bg-accent text-white shadow-md shadow-accent/30"
+                        : "bg-white/10 text-white/70 hover:bg-white/20 hover:text-white",
+                    )}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </motion.div>
+            )}
           </div>
-        )}
+        </div>
+
+        <section className="max-w-7xl mx-auto px-6 py-12" aria-label="Courses" aria-busy={loading}>
+          {loading ? (
+            <div className="flex justify-center py-24" role="status">
+              <div className="w-8 h-8 border-4 border-accent/20 border-t-accent rounded-full animate-spin" />
+              <span className="sr-only">Loading courses…</span>
+            </div>
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-24">
+              <GraduationCap className="w-12 h-12 text-muted-foreground mx-auto mb-4" aria-hidden="true" />
+              <p className="text-muted-foreground font-inter">No courses found.</p>
+            </div>
+          ) : (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filtered.map((course, i) => (
+                <CourseCard
+                  key={course.id}
+                  course={course}
+                  index={i}
+                  inCart={inCart(course.id)}
+                  justAdded={justAdded.has(course.id)}
+                  onAdd={handleAdd}
+                />
+              ))}
+            </div>
+          )}
+        </section>
       </main>
     </div>
   );

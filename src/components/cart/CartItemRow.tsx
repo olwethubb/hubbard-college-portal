@@ -31,7 +31,7 @@ export function CartItemRow({ item, onQtyChange, onRemove }: CartItemRowProps) {
       </div>
 
       <div className="flex-1 min-w-0">
-        <h3 className="font-inter font-semibold text-foreground text-sm leading-snug mb-1 line-clamp-2">{item.name}</h3>
+        <h2 className="font-inter font-semibold text-foreground text-sm leading-snug mb-1 line-clamp-2">{item.name}</h2>
         <p className="text-xs text-accent font-inter font-medium mb-3">Contact for Pricing</p>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2" role="group" aria-label={`Quantity of ${item.name}`}>
