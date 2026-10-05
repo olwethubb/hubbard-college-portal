@@ -87,7 +87,7 @@ export function Hero() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col-reverse text-center md:text-left p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
+              className="flex flex-col-reverse justify-end text-center md:text-left p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
             >
               <dt className="text-sm text-white/60 font-inter">{stat.label}</dt>
               <dd className="text-3xl lg:text-4xl font-playfair font-bold text-white mb-1">{stat.value}</dd>
