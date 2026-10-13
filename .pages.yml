@@ -1,0 +1,59 @@
+# Pages CMS config for the Hubbard College course catalog
+# Put this file in the root of the hubbard-college-portal repo.
+
+media:
+  input: public/images/courses   # where uploaded images are saved in the repo
+  output: /images/courses        # path written into courses.json (matches existing entries)
+  rename: safe                   # tidies new upload filenames (lowercase, no spaces)
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: courses
+    label: Courses
+    type: file
+    path: src/data/courses.json
+    format: json
+    list: true                   # courses.json is one list of courses
+    operations:
+      delete: false              # stops anyone deleting courses.json itself (the site build needs it)
+    fields:
+      - name: id
+        label: Course ID
+        type: string
+        required: true
+        description: Must be unique. The cart uses it to tell courses apart.
+      - name: name
+        label: Course name
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [Communication, Ethics, Finance, Leadership, Management, Marketing, Personal Development, Productivity, Strategy]
+      - name: duration
+        label: Duration
+        type: select
+        options:
+          values: [1-Day Course, 2-Day Course]
+      - name: description
+        label: Short description
+        type: text
+        description: The course card shows about 2 lines, so keep it to one sentence.
+      - name: image_url
+        label: Card image
+        type: image
+      - name: is_active
+        label: Active
+        type: boolean
+        default: true
+        description: The site does not currently hide inactive courses.
+      - name: created_date
+        label: Created date
+        type: string
+        readonly: true
+      - name: source_image_url
+        label: Original image URL
+        type: string
+        readonly: true
